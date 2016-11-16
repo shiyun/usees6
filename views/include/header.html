@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="bookmark" href="/favicon.ico" type="image/x-icon"　/>
+<title>{{title}}</title>
+<link rel="stylesheet" href="/css/style.min.css" />
+<script src="/js/libs.min.js"></script>
+</head>
+
+<body>
+<header class="header clearfix">
+	<h1 class="logo"><a href="/"><img src="/images/logo.png" alt="法宝网" /></a></h1>
+	<ul class="list-nav">
+		<li{{#isEqual curNum 0}} class="cur"{{/isEqual}}><a href="/">首页</a></li>
+		<li{{#isEqual curNum 1}} class="cur"{{/isEqual}}><a href="/news">新闻活动</a></li>
+		<li{{#isEqual curNum 2}} class="cur"{{/isEqual}}>
+			<a class="cp" href="/enterprise">产品与案例<s class="icon-downArrow"></s></a>
+			<ul class="list-secNav">
+				<li><a href="/enterprise">企业用户</a></li>
+				<li><a href="/indivisual">个人用户</a></li>
+				<li><a href="/government">政府项目</a></li>
+				<li><a href="/mainProduct">标杆案例</a></li>
+			</ul>
+		</li>
+		<li{{#isEqual curNum 3}} class="cur"{{/isEqual}}><a href="/ability">能力平台</a></li>
+		<li{{#isEqual curNum 4}} class="cur"{{/isEqual}}>
+			<a class="cp" href="/aboutUs#about1">关于我们<s class="icon-downArrow"></s></a>
+			<ul class="list-secNav">
+				<li class="active"><a href="/aboutUs#about1">公司简介</a></li>
+				<li><a href="/aboutUs#about2">大事记 </a></li>
+				<li><a href="/aboutUs#about3">资质荣誉</a></li>
+				<li><a href="/aboutUs#about4">创始人团队</a></li>
+				<li><a href="/aboutUs#about5">公益活动</a></li>
+			</ul>
+		</li>
+		<li{{#isEqual curNum 5}} class="cur"{{/isEqual}}>
+			<a class="cp" href="/joinUs/6">加入我们<s class="icon-downArrow"></s></a>
+			<ul class="list-secNav">
+				<li><a href="/joinUs/6" jobId="6">急招岗位</a></li>
+				<li><a href="/joinUs/7" jobId="7">日常岗位</a></li>
+				<li><a href="/joinUs/8" jobId="8">校园招聘</a></li>
+			</ul>
+		</li>
+		<!--
+		<li><a href="/investment">投资者关系</a></li>
+		<li>
+			<span>魔法大学<s class="icon-downArrow"></s></span>
+			<ul class="list-secNav">
+				<li><a href="#">企业用户</a></li>
+				<li><a href="#">个人用户</a></li>
+				<li><a href="#">政府项目</a></li>
+				<li><a href="#">标杆案例</a></li>
+			</ul>
+		</li> -->
+		<li{{#isEqual curNum 6}} class="cur"{{/isEqual}}><a href="/contactUs">联系我们</a></li>
+	</ul>
+</header>

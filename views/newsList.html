@@ -1,0 +1,37 @@
+{{> header}}
+<section class="bannerNewsList">
+</section>
+<section class="cont mb20">
+	<nav class="nav-newList">您现在的位置：<a href="/">首页</a> - <span class="uColor">新闻活动</span></nav>
+</section>
+<section class="cont mb15">
+	<div class="searchByMonthWrap tr">
+		按月份检索新闻
+		<input type="text" class="input" id="monthly" class="select-month" value="2016年6月">
+	</div>
+</section>
+<section class="cont" id="initNewList">
+	<div class="topFourNewsList">
+		<ul class="list-topFour"></ul>
+	</div>
+	<ul class="list-news"></ul>
+	<ul class="list-news list-news1">
+	</ul>
+	<div class="loading tc">
+		<img src="/images/loading.gif">
+  </div>
+	<p class="tc mt20 mb30"><span class="cp btn-loadNews"><img src="/images/common/icon_load.png" alt="加载更多" /></span></p>
+</section>
+
+<section class="cont hidden" id="searchCont">
+	<ul class="list-news">
+	</ul>
+	<!-- <h3 class="noMoreNews" style="display:none;text-align:center;position:relative;">没有更多新闻了</h3> -->
+	<div class="loading tc">
+		<img src="/images/loading.gif">
+  	</div>
+	<p class="tc mt20 mb30"><span class="cp btn-loadNews1" id="btn-loadSearch"><img src="/images/common/icon_load.png" alt="加载更多" /></span></p>
+</section>
+
+<script src="/js/news.min.js"></script>
+{{> footer}}

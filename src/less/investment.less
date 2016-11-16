@@ -1,0 +1,53 @@
+//投资者关系
+.investment-list{
+  width: 100%;
+  li:nth-child(odd){
+    background-color: #f3f6f9;
+  }
+  li:nth-child(even){
+    background-color: #fff;
+  }
+  li:hover{
+    color: #1b468d;
+    cursor: pointer;
+  }
+  li{
+    float: left;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 15px;
+    color: #666;
+    font-size: 0;
+    time{
+      font-size: 14px;
+      padding-left: 15px;
+      background: url(../images/investment/icon-tran.png) left center no-repeat;
+    }
+    p{
+      font-size: 14px;
+      display: inline-block;
+      width: 900px;
+      margin-left: 20px;
+    }
+    span{
+      font-size: 14px;
+      display: inline-block;
+      padding-left: 25px;
+      cursor: pointer;
+      color: #333;
+      font-weight: bolder;
+      background: url(../images/investment/check.png) left center no-repeat;
+    }
+    a{
+      font-size: 14px;
+      display: inline-block;
+      padding-left: 25px;
+      margin-left: 15px;
+      cursor: pointer;
+      color: #333;
+      font-weight: bolder;
+      background: url(../images/investment/downDoc.png) left center no-repeat;
+    }
+  }
+}

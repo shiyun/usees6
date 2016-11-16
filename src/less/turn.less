@@ -1,0 +1,63 @@
+.flipbook-viewport{
+	position:absolute;
+	overflow:hidden;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-color:#000;
+	width:100%;
+	height:100%;
+	z-index:9;
+}
+
+.flipbook-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:auto;
+}
+
+.flipbook-viewport .flipbook{
+	width:939px;
+	height:650px;
+	left:-469px;
+	top:-325px;
+}
+
+.flipbook-viewport .page{
+	width:469px;
+	height:650px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.flipbook .page{
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}
+.ui-slider-handle {top:0 !important;}
+#canvas {background-color:#A9A8A8;position:fixed;top:0;left:0;right:0;bottom:0;z-index:9;}

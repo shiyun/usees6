@@ -1,0 +1,133 @@
+//加入我们less
+
+.fz24{
+  font-size: 24px;
+}
+.joinus-top{
+  background: url("../images/joinus/joinus-people.png") no-repeat bottom center;
+  padding-bottom: 100px;
+  .h2-about{
+    text-align: center;
+    color: #1b468d;
+  }
+  p,h3{
+    font-size: 16px;
+    text-align: center;
+    color: #1b468d;
+    margin-top: 15px;
+  }
+  h3{
+    color: #000;
+  }
+}
+.job-wrap{
+  margin-top: -3px;
+  .job-nav{
+    width: 100%;
+    height: 50px;
+    background: #dee2e5;
+    li{
+      width: 400px;
+      float: left;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      color: #1b458d;
+    }
+    .nav-on{
+      background: #2da2de;
+      color: #fff;
+    }
+  }
+  .job-list{
+    display: none;
+    .loading{
+      text-align: center;
+    }
+    dl{
+      border:1px solid #eee;
+      dt,dd{
+        font-size: 0;
+        .job-item{
+          &:extend(.bgWhite);
+          padding: 18px 0;
+          text-align: center;
+          border-bottom: 1px dotted #eee;
+          transition: all .2s linear;
+          .job-style{
+            //text-overflow: ellipsis;
+            //overflow: hidden;
+            //white-space: nowrap;
+            float: left;
+          }
+          .job-name{
+            width: 220px;
+            text-align: left;
+            margin-left: 40px;
+          }
+          .job-type{
+            width: 160px;
+          }
+          .job-number{
+            width: 130px;
+          }
+          .job-place{
+            width: 350px;
+          }
+          .job-time{
+            width: 200px;
+          }
+        }
+        .job-details{
+          padding: 20px 40px;
+          display: none;
+
+          h2{
+            font-size: 18px;
+            color: #2da2de;
+          }
+          .pre-str{
+            //line-height: 14px;
+            pre{
+              font-size: 14px;
+              color: #666;
+              font-family: "microsoft yahei";
+              overflow: hidden;
+              line-height: 20px;
+              word-break: break-word;
+              white-space: pre-wrap;
+            }
+          }
+        }
+      }
+      dt{
+        .job-item{
+          font-size: 18px;
+          border-bottom: 1px dotted #eee;
+        }
+      }
+      dd{
+        border-bottom: 1px dotted #eee;
+        font-size: 16px;
+        .job-item{
+          color: #666;
+          background: url("../images/joinus/icon-down.png") center right no-repeat;
+        }
+        .job-item-on{
+          background: url("../images/joinus/icon-up.png") center right no-repeat;
+        }
+        .job-item:hover{
+          background: #fff;
+          box-shadow: 0 0 20px rgba(0,0,0,.2);
+        }
+      }
+      dd:last-child{
+        border:none;
+      }
+    }
+  }
+}
+
+.jobList {min-height: 50px;}
+.noJobData {&:extend(.tc,.f16,.c9,.bgWhite);line-height:50px;}
