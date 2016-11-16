@@ -11,7 +11,7 @@ wrench.readdirSyncRecursive('./gulp').filter(file => {
 });
 
 gulp.task('test', ()=>{
-	gulp.start(['test1']);
+	//gulp.start(['test1']);
 });
 
 gulp.task('fabaocn', ()=>{

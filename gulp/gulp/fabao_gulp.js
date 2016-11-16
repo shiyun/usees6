@@ -26,7 +26,7 @@ import sourcemaps from 'gulp-sourcemaps';
 const pathUrl = '../usees6/';
 const jsFile = ['news'];
 
-gulp.task('test1', ()=>{
+gulp.task('fabao_comps', ()=>{
 	jsFile.forEach((file)=>babelTransform(file));
 	/*
 	return browserify({entries: pathUrl+'src/js/news.js',debug: true})
@@ -93,6 +93,7 @@ gulp.task('fabao_images', function() {
 gulp.task('fabao_watch', ()=>{
 	gulp.watch(pathUrl+'src/less/*.*', ['less']);
 	gulp.watch(pathUrl+'src/images/**/*.*', ['images']);
+	gulp.watch(pathUrl+'src/js/**/*.*', ['fabao_comps']);
 });
 
 //js检查,合并，压缩公共js文件
