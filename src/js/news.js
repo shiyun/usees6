@@ -17,7 +17,7 @@ ajax.get(ajax.api.GET_NEWS_INFO,
 let pageSize = 9;
 let tmp1 = { number: 4, type: 1 };
 ajax.get(ajax.api.GET_NEWS_INFO, tmp1, (data)=>{
-	//console.log(data);
+	console.log(data);
 	let _html = '';
 	for(let i=0; i<data.res.length; i++) {
 		_html += 	
@@ -72,7 +72,7 @@ ajax.get(ajax.api.GET_NEWS_INFO, tmp2, (data)=>{
 });
 
 let page3 = 1;
-let getNewsList = function(){
+let getNewsList = ()=>{
 	let listNews = $('#initNewList').find('.list-news1');
 	let tmp3 = { pageSize:pageSize, pageNumber: page3 };
 	ajax.get(ajax.api.GET_NEWS_LIST,tmp3, function(data){
@@ -121,7 +121,7 @@ $('.btn-loadNews').off('click').on('click', function(){
 });
 
 let page4 = 0;
-let getNewsListByMonth = function(create){
+let getNewsListByMonth = (create) => {
 	let listNews = $('#searchCont').find('.list-news');
 	page4 += 1;
 	let tmp4 = { pageSize:pageSize, pageNumber: page4, createtime: create};
@@ -129,7 +129,7 @@ let getNewsListByMonth = function(create){
 		let _html = '';
 		$('.list-news').find('.noMoreNews').remove();
 		$('#btn-loadSearch').show();
-		//console.log(data);
+		console.log(data);
 		//console.log(data.res.length);
 		if(data.res.length <= 0 ) {
 			if(!listNews.find('li').length){
