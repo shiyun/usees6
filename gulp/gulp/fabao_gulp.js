@@ -68,6 +68,7 @@ gulp.task('fabao_libs', function(){
 		])
 		.pipe(concat('libs.js'))
 		.pipe(rename({suffix: '.min'}))
+		.pipe(uglify())
 		.pipe(gulp.dest(pathUrl+'public/js'))
 });
 
