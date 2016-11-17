@@ -9,8 +9,8 @@ class ApiUtil {
 
 	dataCont(req, res){
 		req.cont = {}
-		let url = req.url.split('/');
-		if(url.length < 4){
+		let url = req.url.split('/');		
+		if(url.length < 3){
 			res.send({header: {status: 0}, body:{msg: "请求接口路径有误"}});
 			return ;
 		}
@@ -22,10 +22,10 @@ class ApiUtil {
 		}
 		let method = req.method;
 		if(method == 'POST'){
-			req.cont.data = {data: req.body};
+			req.cont.data = req.body;
 			req.cont.method = 'POST';
 		}else{
-			req.cont.data = {data: req.query};
+			req.cont.data = req.body;
 			req.cont.method = 'GET';
 		}
 	}
@@ -33,15 +33,20 @@ class ApiUtil {
 	request(req, responseHandler){
 		let data = req.cont;
 		let url = global.CONFIG[req.cont.server] + req.cont.command;
+		console.log(`[BODY]: ${JSON.stringify(data.data)}`);
 		if(data.method == 'POST'){
-			console.log(` ---------------------------------------------- \n [POST TO ${url}] \n ---------------------------------------------- `);
-			request.post(url, responseHandler).form(data);
+			console.log(`----------------------------------------------\n[POST TO ${url}]\n----------------------------------------------`);
+			request.post(url, responseHandler).form(data.data);
 		}else{
 			let params = '?';
 			_.forEach(data.data, (v, k)=>{
-				params += k + '=' + v + '&';
+				if(_.isString(v)){
+					params += k + '=' + v + '&';
+				}else if(_.isObject(v)){
+					params += k + '=' + JSON.stringify(v) + '&';
+				}
 			});
-			console.log(` ---------------------------------------------- \n [GET TO ${url}] \n ---------------------------------------------- `);
+			console.log(`----------------------------------------------\n[GET TO ${url}]\n----------------------------------------------`);
 			request.get(url, responseHandler);
 		}
 	}
