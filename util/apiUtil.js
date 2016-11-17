@@ -35,14 +35,14 @@ class ApiUtil {
 		let url = global.CONFIG[req.cont.server] + req.cont.command;
 		if(data.method == 'POST'){
 			console.log(` ---------------------------------------------- \n [POST TO ${url}] \n ---------------------------------------------- `);
-			request(url, responseHandler).form(data);
+			request.post(url, responseHandler).form(data);
 		}else{
 			let params = '?';
 			_.forEach(data.data, (v, k)=>{
 				params += k + '=' + v + '&';
 			});
 			console.log(` ---------------------------------------------- \n [GET TO ${url}] \n ---------------------------------------------- `);
-			request(url, responseHandler);
+			request.get(url, responseHandler);
 		}
 	}
 
