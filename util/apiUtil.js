@@ -11,7 +11,7 @@ class ApiUtil {
 		req.cont = {}
 		let url = req.url.split('/');		
 		if(url.length < 3){
-			res.send({header: {status: 0}, body:{msg: "请求接口路径有误"}});
+			res.send({header: {status: 0}, body:{msg: "请求的路径有误！"}});
 			return ;
 		}
 		req.cont.server  = url[1];
@@ -36,7 +36,14 @@ class ApiUtil {
 		console.log(`[BODY]: ${JSON.stringify(data.data)}`);
 		if(data.method == 'POST'){
 			console.log(`----------------------------------------------\n[POST TO ${url}]\n----------------------------------------------`);
-			request.post(url, responseHandler).form(data.data);
+			//request.post(url, responseHandler).form(data.data);			
+			request({
+			    url: url,
+			    method: "POST",
+			    json: true,			    
+				headers: {"content-type": "application/json"},
+			    body: data.data},
+			responseHandler);
 		}else{
 			let params = '?';
 			_.forEach(data.data, (v, k)=>{
